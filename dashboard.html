@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zero English - Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>🔰 Zero English</h1>
+                <p>Salom, <span id="userName">...</span>!</p>
+            </div>
+            <nav>
+                <a href="dashboard.html" class="active">📚 Kurs</a>
+                <a href="competition.html">🏆 Bellashuv</a>
+                <a href="#" onclick="logout()">🚪 Chiqish</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <!-- Motivatsion qism -->
+            <div class="motivation-card" id="motivationCard">
+                <div class="motivation-icon">🌟</div>
+                <div class="motivation-text">
+                    <p id="motivationText">"The secret of getting ahead is getting started." - Mark Twain</p>
+                    <p id="motivationUz">"Oldinga chiqishning siri - boshlashdir."</p>
+                </div>
+                <div class="motivation-emoji">😊</div>
+            </div>
+
+            <!-- Reminder (o'qimaganlar uchun) -->
+            <div id="reminderCard" class="reminder-card" style="display: none;">
+                <span>🔥</span>
+                <p>Sizni kutib qoldik! <span id="daysLeft"></span> kundan keyin rekord o‘rnatishingiz mumkin!</p>
+                <button onclick="startFirstLesson()">Davom etish →</button>
+            </div>
+
+            <!-- Progress summary -->
+            <div class="progress-summary">
+                <div class="summary-card">
+                    <h3>📊 Umumiy progress</h3>
+                    <div class="big-progress-bar">
+                        <div class="big-progress" id="totalProgress" style="width: 0%">0%</div>
+                    </div>
+                    <p id="progressText">0/24 dars tugatilgan</p>
+                    <div class="streak">
+                        <span>🔥 Kunlik streak: <span id="streakCount">0</span> kun</span>
+                    </div>
+                </div>
+                <div class="summary-card">
+                    <h3>🎯 Maqsad</h3>
+                    <p>6 oy ichida ingliz tilini o‘rganing</p>
+                    <div class="goal-stats">
+                        <span>📅 Boshlangan: <span id="startDate">-</span></span>
+                        <span>🏆 Sertifikat: <span id="certStatus">❌ Hali mavjud emas</span></span>
+                    </div>
+                    <button id="certBtn" class="btn-cert" onclick="goToCertificate()" style="display: none;">🎓 Sertifikat olish</button>
+                </div>
+            </div>
+
+            <!-- 6 oylik dastur -->
+            <div class="months-container">
+                <div class="month-card">
+                    <div class="month-header">
+                        <h3>📅 1-oy: Noldan birinchi qadamlar</h3>
+                        <span class="month-progress" id="month1Progress">0%</span>
+                    </div>
+                    <div class="lessons-list" id="month1Lessons"></div>
+                </div>
+                <div class="month-card">
+                    <div class="month-header">
+                        <h3>📅 2-oy: Boshlang‘ich (A0 → A1)</h3>
+                        <span class="month-progress" id="month2Progress">0%</span>
+                    </div>
+                    <div class="lessons-list" id="month2Lessons"></div>
+                </div>
+                <div class="month-card">
+                    <div class="month-header">
+                        <h3>📅 3-oy: Past o‘rta (A1 → A2)</h3>
+                        <span class="month-progress" id="month3Progress">0%</span>
+                    </div>
+                    <div class="lessons-list" id="month3Lessons"></div>
+                </div>
+                <div class="month-card">
+                    <div class="month-header">
+                        <h3>📅 4-oy: O‘rta (A2 → B1)</h3>
+                        <span class="month-progress" id="month4Progress">0%</span>
+                    </div>
+                    <div class="lessons-list" id="month4Lessons"></div>
+                </div>
+                <div class="month-card">
+                    <div class="month-header">
+                        <h3>📅 5-oy: Yuqori o‘rta (B1 → B1+)</h3>
+                        <span class="month-progress" id="month5Progress">0%</span>
+                    </div>
+                    <div class="lessons-list" id="month5Lessons"></div>
+                </div>
+                <div class="month-card">
+                    <div class="month-header">
+                        <h3>📅 6-oy: Speaking + Real hayot (B1+ → B2)</h3>
+                        <span class="month-progress" id="month6Progress">0%</span>
+                    </div>
+                    <div class="lessons-list" id="month6Lessons"></div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Dars modal oynasi -->
+    <div id="lessonModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <div id="lessonContent"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

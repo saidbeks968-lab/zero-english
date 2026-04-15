@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zero English - Bellashuv</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>🔰 Zero English</h1>
+                <p>🏆 Bellashuv</p>
+            </div>
+            <nav>
+                <a href="dashboard.html">📚 Kurs</a>
+                <a href="competition.html" class="active">🏆 Bellashuv</a>
+                <a href="#" onclick="logout()">🚪 Chiqish</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="competition-header">
+                <h2>🏆 Oylik Bellashuv</h2>
+                <p>Har oy 10 ta savol. Kim eng ko‘p ball to‘playdi?</p>
+                <div id="competitionStatus" class="competition-status"></div>
+            </div>
+
+            <div class="competition-grid">
+                <div class="quiz-section">
+                    <h3>📝 Test topshirish</h3>
+                    <div id="quizQuestions"></div>
+                    <button id="submitQuizBtn" class="btn-auth" onclick="submitQuiz()" style="display: none;">Javoblarni yuborish</button>
+                </div>
+                <div class="ranking-section">
+                    <h3>🥇 Reyting</h3>
+                    <div id="rankingList"></div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

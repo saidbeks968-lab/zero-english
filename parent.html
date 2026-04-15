@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zero English - Ota-onalar paneli</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="auth-page">
+    <div class="auth-container" style="max-width: 500px;">
+        <div class="auth-card" style="width: 100%;">
+            <div class="auth-logo">
+                <h1>👪 Zero English</h1>
+                <p>Farzandingizning progressini kuzating</p>
+            </div>
+            <div class="auth-form">
+                <h2>Farzandingizni qidirish</h2>
+                <div class="input-group">
+                    <label>👤 Farzandingizning ismi</label>
+                    <input type="text" id="parentFirstName" placeholder="Ism">
+                </div>
+                <div class="input-group">
+                    <label>👨‍👩‍👧 Farzandingizning familiyasi</label>
+                    <input type="text" id="parentLastName" placeholder="Familiya">
+                </div>
+                <button class="btn-auth" onclick="searchChild()">Qidirish →</button>
+                <p class="auth-switch"><a href="index.html">⬅️ Asosiy sahifaga qaytish</a></p>
+            </div>
+            <div id="childResult" style="margin-top: 20px; display: none;"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

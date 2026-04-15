@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zero English - Admin panel</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="auth-page">
+    <div class="auth-container" style="max-width: 900px;">
+        <div class="auth-card" style="width: 100%;">
+            <div class="auth-logo">
+                <h1>👑 Zero English Admin</h1>
+                <p>Barcha o‘quvchilarni boshqarish</p>
+            </div>
+            <div id="adminLogin" class="auth-form">
+                <h2>Admin kirish</h2>
+                <div class="input-group">
+                    <label>👤 Username</label>
+                    <input type="text" id="adminUsername" placeholder="admin">
+                </div>
+                <div class="input-group">
+                    <label>🔒 Parol</label>
+                    <input type="password" id="adminPassword" placeholder="••••••">
+                </div>
+                <button class="btn-auth" onclick="adminLogin()">Kirish →</button>
+                <p class="auth-switch"><a href="index.html">⬅️ Asosiy sahifaga qaytish</a></p>
+            </div>
+            <div id="adminPanel" style="display: none;">
+                <h3>📋 Barcha o‘quvchilar</h3>
+                <div id="usersTable"></div>
+                <button class="btn-auth" onclick="adminLogout()" style="margin-top: 20px;">🚪 Chiqish</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

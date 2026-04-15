@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+   
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <link rel="apple-touch-icon" href="logo.png">
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zero English - Ingliz tilini noldan o'rganing</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="auth-page">
+    <div class="auth-container">
+        <div class="auth-card">
+            <div class="auth-logo">
+                <h1>🔰 Zero English</h1>
+                <p>Ingliz tilini noldan o'rganing</p>
+            </div>
+            
+            <div id="loginForm" class="auth-form">
+                <h2>Kirish</h2>
+                <div class="input-group">
+                    <label>📧 Email yoki Foydalanuvchi nomi</label>
+                    <input type="text" id="loginUsername" placeholder="ismingiz yoki email">
+                </div>
+                <div class="input-group">
+                    <label>🔒 Parol</label>
+                    <input type="password" id="loginPassword" placeholder="••••••">
+                </div>
+                <button class="btn-auth" onclick="login()">Kirish →</button>
+                <p class="auth-switch">Hisobingiz yo‘qmi? <a href="#" onclick="showRegister()">Ro‘yxatdan o‘tish</a></p>
+                <hr>
+                <p class="auth-switch">👪 Ota-ona? <a href="parent.html">Farzandingizni kuzating</a></p>
+                <p class="auth-switch">👑 Admin? <a href="admin.html">Admin panel</a></p>
+            </div>
+
+            <div id="registerForm" class="auth-form" style="display: none;">
+                <h2>Ro‘yxatdan o‘tish</h2>
+                <div class="input-group">
+                    <label>👤 Ism</label>
+                    <input type="text" id="regFirstName" placeholder="Ismingiz">
+                </div>
+                <div class="input-group">
+                    <label>👨‍👩‍👧 Familiya</label>
+                    <input type="text" id="regLastName" placeholder="Familiyangiz">
+                </div>
+                <div class="input-group">
+                    <label>📧 Email</label>
+                    <input type="email" id="regEmail" placeholder="example@gmail.com">
+                </div>
+                <div class="input-group">
+                    <label>🔒 Parol</label>
+                    <input type="password" id="regPassword" placeholder="Kamida 4 ta belgi">
+                </div>
+                <div class="input-group">
+                    <label>🔁 Parolni takrorlang</label>
+                    <input type="password" id="regConfirmPassword" placeholder="Parolingizni qayta kiriting">
+                </div>
+                <button class="btn-auth" onclick="register()">Ro‘yxatdan o‘tish →</button>
+                <p class="auth-switch">Hisobingiz bormi? <a href="#" onclick="showLogin()">Kirish</a></p>
+            </div>
+        </div>
+        <div class="auth-info">
+            <div class="info-card">
+                <h3>🎯 6 oyda ingliz tilini o‘rganing</h3>
+                <ul>
+                    <li>✅ 100% bepul</li>
+                    <li>✅ 24+ darslar (ketma-ket)</li>
+                    <li>✅ Audio va testlar</li>
+                    <li>✅ Speaking mashqlari</li>
+                    <li>✅ Sertifikat (6 oydan keyin)</li>
+                    <li>✅ Har oy bellashuv</li>
+                    <li>✅ Ota-onalar nazorati</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
